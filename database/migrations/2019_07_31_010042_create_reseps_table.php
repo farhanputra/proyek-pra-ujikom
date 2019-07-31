@@ -16,8 +16,8 @@ class CreateResepTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('nomor_resep');
             $table->unsignedInteger('tanggal_resep');
-            $table->unsignedInteger('kode_dkt');
-            $table->unsignedInteger('kode_psn');
+            $table->unsignedInteger('kode_dokter');
+            $table->unsignedInteger('kode_pasien');
             $table->unsignedInteger('total_harga');
             $table->unsignedInteger('bayar');
             $table->unsignedInteger('kembali');
