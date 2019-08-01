@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateObatsTable extends Migration
+class CreateDetailsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,12 @@ class CreateObatsTable extends Migration
      */
     public function up()
     {
-        Schema::create('obats', function (Blueprint $table) {
+        Schema::create('details', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('kode_obat');
-            $table->integer('nama_obat');
-            $table->string('jenis_obat');
-            $table->string('kategori');
-            $table->integer('harga_obat');
-            $table->integer('kode_obat');
-
+            $table->integer('no_resep');
+            $table->string('kode_obat');
+            $table->integer('harga');
+            $table->integer('sub_total');
             $table->timestamps();
         });
     }
@@ -33,6 +30,6 @@ class CreateObatsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('obats');
+        Schema::dropIfExists('details');
     }
 }

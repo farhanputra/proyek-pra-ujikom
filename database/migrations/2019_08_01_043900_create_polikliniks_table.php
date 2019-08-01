@@ -15,7 +15,7 @@ class CreatePolikliniksTable extends Migration
     {
         Schema::create('polikliniks', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('kode_plk');
+            $table->string('kode_plk');
             $table->string('nama_plk');
             $table->timestamps();
         });

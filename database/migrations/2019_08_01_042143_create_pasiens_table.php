@@ -14,11 +14,10 @@ class CreatePasiensTable extends Migration
     public function up()
     {
         Schema::create('pasiens', function (Blueprint $table) {
-            $table->bigIncrements('id'); 
-            $table->integer('kode_pasien');
+            $table->bigIncrements('id');
+            $table->string('kode_pasien');
             $table->string('nama_pasien');
             $table->string('alamat_pasien');
-            $table->string('gender_pasien');
             $table->integer('umur_pasien');
             $table->integer('telepon_pasien');
             $table->timestamps();
