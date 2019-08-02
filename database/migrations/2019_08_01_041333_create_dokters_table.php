@@ -15,7 +15,7 @@ class CreateDoktersTable extends Migration
     {
         Schema::create('dokters', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('kode_dokter');
+            $table->string('kode_dokter');
             $table->string('nama_dokter');
             $table->string('spesialis');
             $table->string('alamat_dokter');
